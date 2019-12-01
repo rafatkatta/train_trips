@@ -1,6 +1,6 @@
 # Specifies the HTTP endpoint of your Prisma API (deployed to a Prisma Demo server).
 endpoint: https://eu1.prisma.sh/public-rustpirate-225/train_trips/dev
-
+#endpoint: http://localhost:4466/train_trips/dev
 # Defines your models, each model is mapped to the database as a table.
 datamodel: datamodel.prisma
 

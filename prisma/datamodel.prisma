@@ -14,4 +14,14 @@ type User {
   password: String!
   name: String!
   posts: [Post!]!
+  trips: [Trip!]!
+}
+
+type Trip {
+  id: ID! @id
+  title: String! 
+  description: String!
+  destination: String!
+  departure: String!
+  traveller: User!
 }

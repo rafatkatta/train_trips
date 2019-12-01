@@ -32,4 +32,33 @@ mutation {
   }) {
     id
   }
+
+  user3: createUser(data: {
+    email: "rani@prisma.io"
+    name: "Rani"
+    password: "$2b$10$dqyYw5XovLjpmkYNiRDEWuwKaRAvLaG45fnXE5b3KTccKZcRPka2m" # "secret42"
+    posts: {
+      create: {
+        title: "Join us for GraphQL Conf 2019 in Berlin"
+        content: "https://www.graphqlconf.org/"
+        published: true
+      }
+    }
+    trips: {
+      create: [{
+        title: "Reise nach Berlin" 
+        description: "eine Reise nach Berlin"
+        destination: "Berlin"
+        departure: "Frankfurt"
+      }{
+        title: "Reise nach Hanau" 
+        description: "eine Reise nach Hanau"
+        destination: "Hanau"
+        departure: "Frankfurt"
+      }]
+    }  
+  }) {
+    id
+  }
+
 }
